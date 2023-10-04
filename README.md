@@ -7,8 +7,8 @@
   App Screenshots:
 
   ![app screenshot 1](/public/images/screenshot1.png)
-  ![app screenshot 2](/public/images/screenshot1.png)
-  ![app screenshot 3](/public/images/screenshot1.png)
+  ![app screenshot 2](/public/images/screenshot2.png)
+  ![app screenshot 3](/public/images/screenshot3.png)
   
   ## Table of Contents
   
