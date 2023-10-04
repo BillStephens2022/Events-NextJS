@@ -6,9 +6,9 @@
 
   App Screenshots:
 
-  ![app screenshot 1](/images/screenshot1.png)
-  ![app screenshot 2](/images/screenshot1.png)
-  ![app screenshot 3](/images/screenshot1.png)
+  ![app screenshot 1](/public/images/screenshot1.png)
+  ![app screenshot 2](/public/images/screenshot1.png)
+  ![app screenshot 3](/public/images/screenshot1.png)
   
   ## Table of Contents
   
