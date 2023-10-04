@@ -4,7 +4,8 @@ import EventList from "../components/events/event-list";
 function HomePage(props) {
   return (
     <div>
-      <h1>The Home Page</h1>
+      <h1 className="center home-h1">Event Tracker</h1>
+      <h2 className="center home-h2">Featured Events</h2>
       <EventList items={props.events} />
     </div>
   );
