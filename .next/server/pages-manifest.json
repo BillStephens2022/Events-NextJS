@@ -1,11 +1,11 @@
 {
+  "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
   "/events/events-search": "pages/events/events-search.html",
-  "/_error": "pages/_error.js",
-  "/events/[eventId]": "pages/events/[eventId].js",
-  "/events/[...slug]": "pages/events/[...slug].html",
-  "/events": "pages/events.js",
-  "/": "pages/index.js",
   "/_document": "pages/_document.js",
+  "/events/[eventId]": "pages/events/[eventId].js",
+  "/events": "pages/events.js",
+  "/events/[...slug]": "pages/events/[...slug].html",
+  "/": "pages/index.js",
   "/404": "pages/404.html"
 }
