@@ -112,6 +112,9 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime_ = __webpack_require__(997);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(6689);
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__(968);
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
 // EXTERNAL MODULE: ./helpers/api-util.js
 var api_util = __webpack_require__(4446);
 // EXTERNAL MODULE: ./components/event-detail/event-summary.module.css
@@ -229,6 +232,7 @@ function EventContent(props) {
 
 
 
+
 function EventDetailPage(props) {
     const event = props.selectedEvent;
     if (!event) {
@@ -241,6 +245,17 @@ function EventDetailPage(props) {
     }
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(external_react_.Fragment, {
         children: [
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)((head_default()), {
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("title", {
+                        children: event.title
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                        name: "description",
+                        content: event.description
+                    })
+                ]
+            }),
             /*#__PURE__*/ jsx_runtime_.jsx(event_summary, {
                 title: event.title
             }),
@@ -282,6 +297,14 @@ async function getStaticPaths() {
 }
 /* harmony default export */ const _eventId_ = (EventDetailPage);
 
+
+/***/ }),
+
+/***/ 968:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/head");
 
 /***/ }),
 

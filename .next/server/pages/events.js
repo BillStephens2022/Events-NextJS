@@ -61,9 +61,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1853);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _helpers_api_util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4446);
-/* harmony import */ var _components_events_event_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3481);
-/* harmony import */ var _events_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8003);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(968);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _helpers_api_util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4446);
+/* harmony import */ var _components_events_event_list__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3481);
+/* harmony import */ var _events_search__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(8003);
+
 
 
 
@@ -79,17 +82,28 @@ function AllEventsPage(props) {
     }
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_events_search__WEBPACK_IMPORTED_MODULE_4__["default"], {
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_3___default()), {
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
+                        children: "All Events"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        name: "description",
+                        content: "Find a lot of great events that allow you to evolve..."
+                    })
+                ]
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_events_search__WEBPACK_IMPORTED_MODULE_5__["default"], {
                 onSearch: findEventsHandler
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_events_event_list__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_events_event_list__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
                 items: events
             })
         ]
     });
 }
 async function getStaticProps() {
-    const events = await (0,_helpers_api_util__WEBPACK_IMPORTED_MODULE_5__/* .getAllEvents */ .IP)();
+    const events = await (0,_helpers_api_util__WEBPACK_IMPORTED_MODULE_6__/* .getAllEvents */ .IP)();
     return {
         props: {
             events: events
@@ -267,6 +281,13 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 968:
+/***/ ((module) => {
+
+module.exports = require("next/head");
 
 /***/ }),
 

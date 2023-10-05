@@ -57,14 +57,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _helpers_api_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4446);
-/* harmony import */ var _components_events_event_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3481);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(968);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _helpers_api_util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4446);
+/* harmony import */ var _components_events_event_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3481);
+
 
 
 
 function HomePage(props) {
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         children: [
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_1___default()), {
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
+                        children: "NextJS Event Tracker"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        name: "description",
+                        content: "Find a lot of great events that allow you to evolve..."
+                    })
+                ]
+            }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
                 className: "center home-h1",
                 children: "Event Tracker"
@@ -73,14 +87,14 @@ function HomePage(props) {
                 className: "center home-h2",
                 children: "Featured Events"
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_events_event_list__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_events_event_list__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
                 items: props.events
             })
         ]
     });
 }
 async function getStaticProps() {
-    const featuredEvents = await (0,_helpers_api_util__WEBPACK_IMPORTED_MODULE_2__/* .getFeaturedEvents */ .N6)();
+    const featuredEvents = await (0,_helpers_api_util__WEBPACK_IMPORTED_MODULE_3__/* .getFeaturedEvents */ .N6)();
     return {
         props: {
             events: featuredEvents
@@ -258,6 +272,13 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 968:
+/***/ ((module) => {
+
+module.exports = require("next/head");
 
 /***/ }),
 
