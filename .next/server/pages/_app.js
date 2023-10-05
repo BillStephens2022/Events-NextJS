@@ -31,6 +31,9 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(997);
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__(968);
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(6689);
 // EXTERNAL MODULE: ./node_modules/next/link.js
@@ -92,11 +95,29 @@ var globals = __webpack_require__(6764);
 
 
 
+
 function MyApp({ Component , pageProps  }) {
-    return /*#__PURE__*/ jsx_runtime_.jsx(layout, {
-        children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
-            ...pageProps
-        })
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(layout, {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)((head_default()), {
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("title", {
+                        children: "NextJS Event Tracker"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                        name: "description",
+                        content: "NextJS Events"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                        name: "viewport",
+                        content: "initial-scale=1.0, width=device-width"
+                    })
+                ]
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx(Component, {
+                ...pageProps
+            })
+        ]
     });
 }
 /* harmony default export */ const _app = (MyApp);
@@ -300,6 +321,14 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 "use strict";
 module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 968:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/head");
 
 /***/ }),
 

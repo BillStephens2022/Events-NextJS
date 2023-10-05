@@ -116,6 +116,20 @@ async function getStaticProps() {
 
 /***/ }),
 
+/***/ 3918:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/amp-context.js");
+
+/***/ }),
+
+/***/ 5732:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/amp-mode.js");
+
+/***/ }),
+
 /***/ 3280:
 /***/ ((module) => {
 
@@ -134,6 +148,34 @@ module.exports = require("next/dist/shared/lib/head-manager-context.js");
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
+
+/***/ }),
+
+/***/ 4486:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/image-blur-svg.js");
+
+/***/ }),
+
+/***/ 744:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/image-config-context.js");
+
+/***/ }),
+
+/***/ 5843:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/image-config.js");
+
+/***/ }),
+
+/***/ 9552:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/image-loader");
 
 /***/ }),
 
@@ -277,10 +319,24 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
 
+/***/ 2470:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/side-effect.js");
+
+/***/ }),
+
 /***/ 9232:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 618:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/utils/warn-once.js");
 
 /***/ }),
 
@@ -326,7 +382,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [210,676,664,694,336,3], () => (__webpack_exec__(2766)));
+var __webpack_exports__ = __webpack_require__.X(0, [210,676,664,121,675,694,336,3], () => (__webpack_exec__(2766)));
 module.exports = __webpack_exports__;
 
 })();

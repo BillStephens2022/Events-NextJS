@@ -87,8 +87,9 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(997);
-// EXTERNAL MODULE: ./node_modules/next/link.js
-var next_link = __webpack_require__(1664);
+// EXTERNAL MODULE: ./node_modules/next/image.js
+var next_image = __webpack_require__(5675);
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: ./components/events/event-item.module.css
 var event_item_module = __webpack_require__(9754);
 var event_item_module_default = /*#__PURE__*/__webpack_require__.n(event_item_module);
@@ -134,9 +135,11 @@ function EventItem(props) {
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("li", {
         className: (event_item_module_default()).item,
         children: [
-            /*#__PURE__*/ jsx_runtime_.jsx("img", {
+            /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                 src: "/" + image,
-                alt: title
+                alt: title,
+                width: 250,
+                height: 160
             }),
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                 className: (event_item_module_default()).content,

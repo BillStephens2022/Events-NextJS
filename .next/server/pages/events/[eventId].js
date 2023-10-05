@@ -4,6 +4,37 @@ exports.id = 261;
 exports.ids = [261];
 exports.modules = {
 
+/***/ 7273:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+var __webpack_unused_export__;
+
+__webpack_unused_export__ = ({
+    value: true
+});
+Object.defineProperty(exports, "Z", ({
+    enumerable: true,
+    get: function() {
+        return _objectWithoutPropertiesLoose;
+    }
+}));
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+
+
+/***/ }),
+
 /***/ 4788:
 /***/ ((module) => {
 
@@ -134,6 +165,9 @@ function EventSummary(props) {
 }
 /* harmony default export */ const event_summary = (EventSummary);
 
+// EXTERNAL MODULE: ./node_modules/next/image.js
+var next_image = __webpack_require__(5675);
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: ./components/icons/address-icon.js
 var address_icon = __webpack_require__(6860);
 // EXTERNAL MODULE: ./components/icons/date-icon.js
@@ -171,6 +205,7 @@ var event_logistics_module_default = /*#__PURE__*/__webpack_require__.n(event_lo
 
 
 
+
 function EventLogistics(props) {
     const { date , address , image , imageAlt  } = props;
     const humanReadableDate = new Date(date).toLocaleDateString("en-US", {
@@ -184,9 +219,11 @@ function EventLogistics(props) {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: (event_logistics_module_default()).image,
-                children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                     src: `/${image}`,
-                    alt: imageAlt
+                    alt: imageAlt,
+                    width: 400,
+                    height: 400
                 })
             }),
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("ul", {
@@ -300,6 +337,78 @@ async function getStaticPaths() {
 
 /***/ }),
 
+/***/ 3918:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/amp-context.js");
+
+/***/ }),
+
+/***/ 5732:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/amp-mode.js");
+
+/***/ }),
+
+/***/ 2796:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/head-manager-context.js");
+
+/***/ }),
+
+/***/ 4486:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-blur-svg.js");
+
+/***/ }),
+
+/***/ 744:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-config-context.js");
+
+/***/ }),
+
+/***/ 5843:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-config.js");
+
+/***/ }),
+
+/***/ 9552:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-loader");
+
+/***/ }),
+
+/***/ 2470:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/side-effect.js");
+
+/***/ }),
+
+/***/ 618:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils/warn-once.js");
+
+/***/ }),
+
 /***/ 968:
 /***/ ((module) => {
 
@@ -331,7 +440,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [694], () => (__webpack_exec__(660)));
+var __webpack_exports__ = __webpack_require__.X(0, [210,121,675,694], () => (__webpack_exec__(660)));
 module.exports = __webpack_exports__;
 
 })();
