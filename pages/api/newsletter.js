@@ -6,7 +6,7 @@ function handler(req, res) {
       return;
     }
     console.log(userEmail);
-    res.status(201).json({ message: 'Signed up!'});
+    res.status(201).json({ message: "Signed up!" });
   }
 }
 
