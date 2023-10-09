@@ -1,18 +1,5 @@
 import { MongoClient } from "mongodb";
-
-async function connectDatabase() {
-  const pwParam = encodeURIComponent(process.env.MONGODB_PW);
-  const client = await MongoClient.connect(
-    `mongodb+srv://two4onebill:${pwParam}@cluster0.xvwjnur.mongodb.net/events?retryWrites=true&w=majority`
-  );
-  return client;
-}
-
-async function insertDocument(client, document) {
-  const db = client.db();
-
-  await db.collection("newsletter").insertOne(document);
-}
+import { connectDatabase, insertDocument } from "../../helpers/db-util";
 
 async function handler(req, res) {
   if (req.method === "POST") {
