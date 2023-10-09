@@ -1,34 +1,57 @@
-function handler(req, res) {
+import { MongoClient } from "mongodb";
+
+async function handler(req, res) {
   const eventId = req.query.eventId;
-  
+
+  const pwParam = encodeURIComponent(process.env.MONGODB_PW);
+  const client = await MongoClient.connect(
+    `mongodb+srv://two4onebill:${pwParam}@cluster0.xvwjnur.mongodb.net/events?retryWrites=true&w=majority`
+  );
+
   if (req.method === "POST") {
     // add server-side validation
     const { email, name, text } = req.body;
 
-    if (!email.includes('@') || !name || name.trim() === '' || !text || text.trim === '') {
-      res.status(422).json({ message: 'Invalid input.' });
+    if (
+      !email.includes("@") ||
+      !name ||
+      name.trim() === "" ||
+      !text ||
+      text.trim === ""
+    ) {
+      res.status(422).json({ message: "Invalid input." });
       return;
     }
-    
+
     const newComment = {
-        id: new Date().toISOString(),
-        email,
-        name,
-        text,
+      email,
+      name,
+      text,
+      eventId,
     };
-    console.log(newComment);
-    
-    res.status(201).json({ message: 'Added comment.', comment: newComment });
+
+    const db = client.db();
+
+    const result = await db.collection("comments").insertOne(newComment);
+
+    console.log(result);
+
+    res.status(201).json({ message: "Added comment.", comment: newComment });
   }
 
   if (req.method === "GET") {
-    const dummyList = [
-        { id: 'c1', name: 'Bill', text: 'first comment' },
-        { id: 'c2', name: 'Carolyn', text: 'second comment' }
+    const db = client.db();
 
-    ];
-    res.status(200).json({ comments: dummyList });
+    const documents = await db
+      .collection("comments")
+      .find()
+      .sort({ _id: -1 })
+      .toArray();
+
+    res.status(200).json({ comments: documents });
   }
+
+  client.close();
 }
-  
-  export default handler;
+
+export default handler;
